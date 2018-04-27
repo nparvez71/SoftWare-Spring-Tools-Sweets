@@ -1,0 +1,52 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/WEB-INF/template/template.xhtml">
+	<ui:define name="content">
+		<h:form id="form1" style="">
+		 <p:growl id="messages" showSummary="true" /> 
+			<p:panel id="panel">
+				<br />
+			<h:panelGrid id="display" columns="2" cellpadding="4">
+					<h:outputText value="Exam Grade Name" for="examGradeName"
+						style="padding-left: 30px; padding-right: 30px;" />
+					<p:inputText id="examGradeName" value="#{globalExamGradeMB.bean.examGradeName}"
+					 label="Exam Grade Name"/>
+					 
+					 	<h:outputText value="Predefine ID" for="preDefineID"
+						style="padding-left: 30px; padding-right: 30px;" />
+					<p:inputText id="preDefineID" value="#{globalExamGradeMB.bean.preDefineID}"
+					 label="Predefine ID"/>
+					 
+					 	<h:outputText value="Predefine Statu" for="preDefineStatus"
+						style="padding-left: 30px; padding-right: 30px;" />
+					<p:inputText id="preDefineStatus" value="#{globalExamGradeMB.bean.preDefineStatus}"
+					 label="Predefine Status"/>
+					 
+					 	<h:outputText value="grade Range" for="gradeRange"
+						style="padding-left: 30px; padding-right: 30px;" />
+					<p:inputText id="gradeRange" value="#{globalExamGradeMB.bean.gradeRange}"
+					 label="grade Range"/>
+					 
+					 	<h:outputText value="grade Number" for="gradeNumber"
+						style="padding-left: 30px; padding-right: 30px;" />
+					<p:inputText id="gradeNumber" value="#{globalExamGradeMB.bean.gradeNumber}"
+					 label="grade Number"/>
+					 
+					 
+					<p:outputPanel layout="block" style="text-align:center">
+						<br />
+						<br />
+						<p:commandButton value="Reset" styleClass="" update=":form1:panel"
+							process="@this" actionListener="#{globalExamGradeMB.reset}" />
+						<p:commandButton value="Save" styleClass=""
+							actionListener="#{globalExamGradeMB.insert}" type="submit"
+							update=":form1:messages, :form1:panel :form1" />
+					</p:outputPanel>
+			</h:panelGrid>
+			</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>

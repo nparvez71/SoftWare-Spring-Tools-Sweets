@@ -1,0 +1,57 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pv="http://primefaces.org/volt">
+
+	<h:form id="menuform">
+		<pv:menu>
+			<p:submenu label="Students" icon="icon-leaf">
+
+				<p:menuitem value="Students Forms" icon="icon-leaf"
+					outcome="/views/students/forms" />
+
+				<p:menuitem value="Students All" icon="icon-leaf"
+					outcome="/views/students/all" />
+
+
+			
+
+			</p:submenu>
+
+			<p:submenu label="Users" icon="icon-leaf">
+
+				<p:menuitem value="Add New Role" icon="icon-leaf"
+					outcome="/views/users/role" />
+						<p:menuitem value="All Roles" icon="icon-leaf"
+					outcome="/views/users/role-all" />
+						<p:menuitem value="Add New User" icon="icon-leaf"
+					outcome="/views/users/user" />
+						<p:menuitem value="All Users" icon="icon-leaf"
+					outcome="/views/users/user-all" />
+					<p:menuitem value="Test" icon="icon-leaf"
+					outcome="/views/global/text" />
+
+			</p:submenu>
+			
+			<p:submenu label="Global" icon="icon-leaf">
+
+				<p:menuitem value="Add New Exam" icon="icon-leaf"
+					outcome="/views/global/global-exam" />
+					
+				<p:menuitem value="Add New Grade" icon="icon-leaf"
+					outcome="/views/global/global-exam-grade" />
+					
+					<p:menuitem value="All New exam" icon="icon-leaf"
+					outcome="/views/global/global-exam-all" />
+					
+					<p:menuitem value="All New Grade" icon="icon-leaf"
+					outcome="/views/global/global-exam-grade-all" />
+						
+			</p:submenu>
+
+		</pv:menu>
+	</h:form>
+
+</ui:composition>
